@@ -12,10 +12,11 @@ const Button: React.FC<ButtonProps> = ({
   children,
   leftIcon,
   rightIcon,
+  variant = 'normal',
   ...rest
 }) => {
   return (
-    <StyledButton color={color} {...rest}>
+    <StyledButton color={color} variant={variant} {...rest}>
       {leftIcon && (
         <StyledButtonIconContainer right={false}>
           <StyledButtonIcon component={leftIcon} />

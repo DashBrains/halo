@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/core': ^7.17.5
+  '@fontsource/nunito': ^4.5.4
   '@fontsource/nunito-sans': ^4.5.3
   '@rollup/plugin-babel': ^5.3.1
   '@rollup/plugin-commonjs': ^21.0.2
@@ -49,6 +50,7 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.17.5
+  '@fontsource/nunito': 4.5.4
   '@fontsource/nunito-sans': 4.5.3
   '@rollup/plugin-babel': 5.3.1_@babel+core@7.17.5+rollup@2.69.1
   '@rollup/plugin-commonjs': 21.0.2_rollup@2.69.1
@@ -1649,6 +1651,10 @@ packages:
 
   /@fontsource/nunito-sans/4.5.3:
     resolution: { integrity: sha512-0YBSLH8rnR9pPS9TLevEcYvHAIqDfVUo0Ksb3TMoUc15TEFWMewqEAAXTYN3PqEJy6l6x3NbflFPWdg9YqNBSQ== }
+    dev: true
+
+  /@fontsource/nunito/4.5.4:
+    resolution: { integrity: sha512-pD5tXcQ7SM2oHvZuYOypOD/kfs76HPTBHUGa/7lARkpW6K3LJckycwr8gz9ykmmQACEwFYjcxJt/kM9qaAwnYQ== }
     dev: true
 
   /@gar/promisify/1.1.3:

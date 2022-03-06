@@ -8,6 +8,7 @@ const ButtonColors = {
     disabled:bg-blue-400
     disabled:hover:bg-blue-400
     hover:bg-blue-700
+    active:bg-blue-800
     focus:ring-blue-600
   `,
   success: tw`
@@ -15,6 +16,7 @@ const ButtonColors = {
     disabled:bg-green-400
     disabled:hover:bg-green-400
     hover:bg-green-700
+    active:bg-green-800
     focus:ring-green-600
   `,
   error: tw`
@@ -22,6 +24,7 @@ const ButtonColors = {
     disabled:bg-red-400
     disabled:hover:bg-red-400
     hover:bg-red-700
+    active:bg-red-800
     focus:ring-red-600
   `,
   warning: tw`
@@ -29,6 +32,7 @@ const ButtonColors = {
     disabled:bg-yellow-400
     disabled:hover:bg-yellow-400
     hover:bg-yellow-700
+    active:bg-yellow-800
     focus:ring-yellow-600
   `,
 }
@@ -88,14 +92,12 @@ export const StyledButton = styled.button<ButtonProps>`
   `}
 
   ${({ disableRing }: { disableRing?: boolean }) =>
-    disableRing
-      ? ''
-      : tw`
+    !disableRing &&
+    tw`
       focus:ring-2
       focus:ring-offset-2
     `}
-  ${({ fullWidth }: { fullWidth?: boolean }) => (fullWidth ? tw`w-full` : '')}
-  ${({ disabled }: { disabled?: boolean }) =>
-    disabled ? tw`cursor-default` : ''}
+  ${({ fullWidth }: { fullWidth?: boolean }) => fullWidth && tw`w-full`}
+  ${({ disabled }: { disabled?: boolean }) => disabled && tw`cursor-default`}
   ${({ color }: { color: ButtonColor }) => ButtonColors[color]}
 `
