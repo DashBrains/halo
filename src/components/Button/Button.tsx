@@ -6,29 +6,27 @@ import {
   StyledButtonIconContainer,
 } from './Button.styles'
 import { ButtonProps } from './Button.types'
-import { Lock, User } from 'lucide-react'
 
 const Button: React.FC<ButtonProps> = ({
-  children,
-  fullWidth = false,
   color = 'primary',
-  disabled = false,
-  disableRing = false,
+  children,
+  leftIcon,
+  rightIcon,
+  ...rest
 }) => {
   return (
-    <StyledButton
-      fullWidth={fullWidth}
-      color={color}
-      disabled={disabled}
-      disableRing={disableRing}
-    >
-      {/*<StyledButtonIconContainer right={false}>
-          <StyledButtonIcon component={<Lock />} />
-        </StyledButtonIconContainer>*/}
+    <StyledButton color={color} {...rest}>
+      {leftIcon && (
+        <StyledButtonIconContainer right={false}>
+          <StyledButtonIcon component={leftIcon} />
+        </StyledButtonIconContainer>
+      )}
       <StyledButtonContent>{children}</StyledButtonContent>
-      {/*<StyledButtonIconContainer right={true}>
-          <StyledButtonIcon component={<User />} />
-        </StyledButtonIconContainer>*/}
+      {rightIcon && (
+        <StyledButtonIconContainer right={true}>
+          <StyledButtonIcon component={rightIcon} />
+        </StyledButtonIconContainer>
+      )}
     </StyledButton>
   )
 }

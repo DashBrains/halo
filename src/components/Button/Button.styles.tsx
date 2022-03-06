@@ -7,7 +7,6 @@ const ButtonColors = {
     bg-blue-600
     disabled:bg-blue-400
     disabled:hover:bg-blue-400
-    active:bg-blue-800
     hover:bg-blue-700
     focus:ring-blue-600
   `,
@@ -15,21 +14,21 @@ const ButtonColors = {
     bg-green-600
     disabled:bg-green-400
     disabled:hover:bg-green-400
-    hover:bg-green-500
+    hover:bg-green-700
     focus:ring-green-600
   `,
   error: tw`
     bg-red-600
     disabled:bg-red-400
     disabled:hover:bg-red-400
-    hover:bg-red-500
+    hover:bg-red-700
     focus:ring-red-600
   `,
   warning: tw`
     bg-yellow-600
     disabled:bg-yellow-400
     disabled:hover:bg-yellow-400
-    hover:bg-yellow-500
+    hover:bg-yellow-700
     focus:ring-yellow-600
   `,
 }
@@ -46,8 +45,16 @@ export const StyledButtonIconContainer = styled.span`
   ${({ right }: { right: boolean }) => (right ? tw`pl-2` : tw`pr-2`)}
 `
 
-export const StyledButtonIcon = styled(({ component, ...props }) =>
-  React.cloneElement(component, props)
+export const StyledButtonIcon = styled(
+  ({
+    component,
+    ...props
+  }: {
+    component: React.DetailedReactHTMLElement<
+      { [p: string]: never },
+      HTMLElement
+    >
+  }) => React.cloneElement(component, props)
 )`
   ${tw`
     h-5
@@ -80,15 +87,15 @@ export const StyledButton = styled.button<ButtonProps>`
     focus:outline-none 
   `}
 
-  ${({ disableRing }: { disableRing: boolean }) =>
+  ${({ disableRing }: { disableRing?: boolean }) =>
     disableRing
       ? ''
       : tw`
-      focus:ring-2 
+      focus:ring-2
       focus:ring-offset-2
     `}
-  ${({ fullWidth }: { fullWidth: boolean }) => (fullWidth ? tw`w-full` : '')}
-  ${({ disabled }: { disabled: boolean }) =>
+  ${({ fullWidth }: { fullWidth?: boolean }) => (fullWidth ? tw`w-full` : '')}
+  ${({ disabled }: { disabled?: boolean }) =>
     disabled ? tw`cursor-default` : ''}
   ${({ color }: { color: ButtonColor }) => ButtonColors[color]}
 `
