@@ -7,7 +7,6 @@ const Input: React.FC<InputProps> = ({ error = false, label, ...rest }) => {
     <>
       {label && <StyledLabel>{label}</StyledLabel>}
       <StyledInput error={error} {...rest} />
-      {label && <StyledLabel>{label}</StyledLabel>}
     </>
   )
 }

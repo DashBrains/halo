@@ -18,13 +18,21 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <StyledButton color={color} variant={variant} {...rest}>
       {leftIcon && (
-        <StyledButtonIconContainer right={false}>
+        <StyledButtonIconContainer
+          right={false}
+          disablePadding={variant === 'icon'}
+        >
           <StyledButtonIcon component={leftIcon} />
         </StyledButtonIconContainer>
       )}
-      <StyledButtonContent>{children}</StyledButtonContent>
+      {variant !== 'icon' && (
+        <StyledButtonContent>{children}</StyledButtonContent>
+      )}
       {rightIcon && (
-        <StyledButtonIconContainer right={true}>
+        <StyledButtonIconContainer
+          right={true}
+          disablePadding={variant === 'icon'}
+        >
           <StyledButtonIcon component={rightIcon} />
         </StyledButtonIconContainer>
       )}
