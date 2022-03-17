@@ -176,7 +176,6 @@ export const StyledButton = styled.button<ButtonProps>`
     justify-center
     items-center
     py-2 
-    px-4 
     border 
     border-transparent 
     text-sm 
@@ -191,7 +190,7 @@ export const StyledButton = styled.button<ButtonProps>`
       focus:ring-offset-2
     `}
   ${({ variant }: { variant: ButtonVariant }) =>
-    variant === 'icon' ? tw`rounded-full` : tw`rounded-md`}
+    variant === 'icon' ? tw`rounded-full px-2` : tw`rounded-md px-4`}
   ${({ fullWidth }: { fullWidth?: boolean }) => fullWidth && tw`w-full`}
   ${({ disabled }: { disabled?: boolean }) => disabled && tw`cursor-default`}
   ${({ color, variant }: { color: ButtonColor; variant: ButtonVariant }) =>

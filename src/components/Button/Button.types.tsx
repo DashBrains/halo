@@ -7,7 +7,7 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   fullWidth?: boolean
   color?: ButtonColor
   disableRing?: boolean
-  leftIcon?: Node
-  rightIcon?: Node
+  leftIcon?: JSX.Element
+  rightIcon?: JSX.Element
   variant?: ButtonVariant
 }
