@@ -3,6 +3,7 @@ import { InputProps } from './Input.types'
 
 export const StyledInput = styled.input<InputProps>`
   ${tw`
+    form-input
     appearance-none 
     rounded-none 
     relative 
