@@ -3,7 +3,7 @@ import { Story } from '@storybook/react/types-6-0'
 import Checkbox from './Checkbox'
 
 export default {
-  title: 'Checkbox',
+  title: 'Old Checkbox',
   component: Checkbox,
   argTypes: {
     label: {

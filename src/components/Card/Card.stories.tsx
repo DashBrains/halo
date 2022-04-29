@@ -1,65 +1,69 @@
-import React from 'react'
+import * as React from 'react'
 import { Story } from '@storybook/react/types-6-0'
 import Card from './Card'
-import CardContent from './CardContent'
-import CardHeader from './CardHeader'
-import CardFooter from './CardFooter'
+import { CardActions, CardContent, Typography } from '@mui/material'
+import Button from '../Button'
 
 export default {
   title: 'Card',
   component: Card,
-  argTypes: {
-    shadow: {
-      description: 'Enable shadow',
-      type: 'boolean',
-    },
-  },
 }
 
 const Template: Story = (props) => <Card {...props} />
 
-export const Default = Template.bind({})
-Default.args = {
-  children: <CardContent>Card Content</CardContent>,
-  shadow: true,
-}
-
-export const WithoutShadow = Template.bind({})
-WithoutShadow.args = {
-  children: <CardContent>Card Content without shadow</CardContent>,
-  shadow: false,
-}
-
-export const WithHeader = Template.bind({})
-WithHeader.args = {
+export const Basic = Template.bind({})
+Basic.args = {
+  sx: { minWidth: 275 },
   children: (
     <>
-      <CardHeader>Card header</CardHeader>
-      <CardContent>Card Content</CardContent>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          Word of the Day
+        </Typography>
+        <Typography variant="h5" component="div">
+          benevolent
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          adjective
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
     </>
   ),
-  shadow: true,
 }
 
-export const WithFooter = Template.bind({})
-WithFooter.args = {
+export const Outlined = Template.bind({})
+Outlined.args = {
+  sx: { minWidth: 275 },
+  variant: 'outlined',
   children: (
     <>
-      <CardContent>Card Content</CardContent>
-      <CardFooter>Card Footer</CardFooter>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          Word of the DayA
+        </Typography>
+        <Typography variant="h5" component="div">
+          benevolent
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          adjective
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
     </>
   ),
-  shadow: true,
-}
-
-export const WithHeaderAndFooter = Template.bind({})
-WithHeaderAndFooter.args = {
-  children: (
-    <>
-      <CardHeader>Card header</CardHeader>
-      <CardContent>Card Content</CardContent>
-      <CardFooter>Card Footer</CardFooter>
-    </>
-  ),
-  shadow: true,
 }

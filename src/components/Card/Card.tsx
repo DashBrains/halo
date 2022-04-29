@@ -1,13 +1,12 @@
-import * as React from 'react'
-import { StyledCard } from './Card.styles'
-import { CardProps } from './Card.types'
+import { styled, Card as MUICard } from '@mui/material'
 
-const Card: React.FC<CardProps> = ({ children, shadow = true, ...rest }) => {
-  return (
-    <StyledCard shadow={shadow} {...rest}>
-      {children}
-    </StyledCard>
-  )
-}
+const Card = styled(MUICard)((props) => {
+  return {
+    borderWidth: '1px',
+    borderRadius: props.theme.shape.borderRadius,
+    boxShadow:
+      '0 0px 6px 1px rgba(0, 0, 0, 0.1), 0 0px 4px 1px rgba(0, 0, 0, 0.06)',
+  }
+})
 
 export default Card
