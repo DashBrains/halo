@@ -16,8 +16,8 @@ const Template: Story = (props) => (
   </Box>
 )
 
-export const Default = Template.bind({})
-Default.args = {
+export const Primary = Template.bind({})
+Primary.args = {
   children: (
     <>
       <Toolbar>
@@ -58,6 +58,32 @@ Secondary.args = {
           News
         </Typography>
         <Button color="inherit">Login</Button>
+      </Toolbar>
+    </>
+  ),
+}
+
+export const Default = Template.bind({})
+Default.args = {
+  color: 'inherit',
+  children: (
+    <>
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          News
+        </Typography>
+        <Button color="primary" variant="contained" disableRing>
+          Login
+        </Button>
       </Toolbar>
     </>
   ),

@@ -1,5 +1,5 @@
 export interface CommonStyledProps {
-  sx: {
+  sx?: {
     backgroundColor?: string
     color?: string
   }

@@ -2,7 +2,11 @@ import { styled, Button as MUIButton } from '@mui/material'
 import shadeColor from '../../utils/shadeColor'
 import { CommonStyledProps } from '../../utils/common'
 
-const Button = styled(MUIButton)<CommonStyledProps>((props) => {
+export interface ButtonProps {
+  disableRing?: boolean
+}
+
+const Button = styled(MUIButton)<CommonStyledProps & ButtonProps>((props) => {
   const color =
     props.color && props.color !== 'inherit' ? props.color : 'primary'
   const bgColor = props.sx?.backgroundColor
@@ -21,8 +25,10 @@ const Button = styled(MUIButton)<CommonStyledProps>((props) => {
   }
 
   if (props.color !== 'inherit' && props.variant === 'contained') {
-    baseStyle['&:focus'] = {
-      boxShadow: `${props.theme.palette.background.default} 0px 0px 0px 2px, ${bgColor} 0px 0px 0px 4px`,
+    if (!props.disableRing) {
+      baseStyle['&:focus'] = {
+        boxShadow: `${props.theme.palette.background.default} 0px 0px 0px 2px, ${bgColor} 0px 0px 0px 4px`,
+      }
     }
     baseStyle['&:hover'] = {
       backgroundColor: shadeColor(bgColor, -10),

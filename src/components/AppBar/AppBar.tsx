@@ -4,8 +4,6 @@ import { CommonStyledProps } from '../../utils/common'
 interface baseStyleProps {
   backdropFilter: string
   boxShadow: string
-  borderBottomRightRadius: string | number
-  borderBottomLeftRadius: string | number
   top?: number
   zIndex?: number
 }
@@ -17,8 +15,6 @@ const AppBar = styled(MUIAppBar)<CommonStyledProps>((props) => {
     backdropFilter: 'saturate(180%) blur(20px)',
     boxShadow:
       '0 4px 6px 1px rgba(0, 0, 0, 0.1), 0 2px 4px 1px rgba(0, 0, 0, 0.06)',
-    borderBottomRightRadius: props.theme.shape.borderRadius,
-    borderBottomLeftRadius: props.theme.shape.borderRadius,
   }
 
   if (props.position === 'fixed') {
