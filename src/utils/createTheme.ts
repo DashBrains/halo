@@ -1,4 +1,5 @@
 import { createTheme as MUICreateTheme, ThemeOptions } from '@mui/material'
+import _ from 'lodash'
 
 const createTheme = (options?: ThemeOptions) => {
   const baseTheme = {
@@ -61,12 +62,13 @@ const createTheme = (options?: ThemeOptions) => {
       MuiButton: {
         defaultProps: {
           disableElevation: true,
+          disableRipple: true,
         },
       },
     },
   }
 
-  return MUICreateTheme({ ...baseTheme, ...options })
+  return MUICreateTheme(_.merge(baseTheme, options))
 }
 
 export default createTheme

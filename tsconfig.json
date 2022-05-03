@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "rootDir": "./src",
     "outDir": "./dist",
     "lib": [
@@ -9,10 +9,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "@mui/system": ["node_modules/@mui/system"]
+    },
     "declaration": true,
     "declarationDir": "dist",
     "allowJs": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -25,7 +28,6 @@
   },
   "include": [
     "src",
-    "types"
   ],
   "exclude": [
     "node_modules",

@@ -1,15 +1,13 @@
-import { styled, AppBar as MUIAppBar, alpha } from '@mui/material'
+import { styled, AppBar as MUIAppBar, alpha, CSSObject } from '@mui/material'
 import { CommonStyledProps } from '../../utils/common'
 
-interface baseStyleProps {
+interface baseStyleProps extends CSSObject {
   backdropFilter: string
   boxShadow: string
   top?: number
   zIndex?: number
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 const AppBar = styled(MUIAppBar)<CommonStyledProps>((props) => {
   const baseStyle: baseStyleProps = {
     backdropFilter: 'saturate(180%) blur(20px)',
