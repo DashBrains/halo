@@ -20,12 +20,14 @@ const Link = styled(MUILink)<CommonStyledProps>((props) => {
     ? props.sx?.color
     : props.theme.palette[color].main
 
+  const isDark = props.theme.palette.mode && props.theme.palette.mode === 'dark'
+
   return {
     '&:hover': {
-      color: shadeColor(bgColor, -10),
+      color: shadeColor(bgColor, isDark ? 10 : -10),
     },
     '&:active': {
-      color: shadeColor(bgColor, -20),
+      color: shadeColor(bgColor, isDark ? 20 : -20),
     },
   }
 })

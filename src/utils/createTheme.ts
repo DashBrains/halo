@@ -34,6 +34,13 @@ const createTheme = (options?: ThemeOptions) => {
         main: '#4F46E5',
         dark: '#4338CA',
       },
+      background: {
+        default: '#f9fafb',
+        paper: '#fff',
+      },
+      text: {
+        primary: '#111827',
+      },
     },
     typography: {
       fontFamily: [
@@ -68,7 +75,26 @@ const createTheme = (options?: ThemeOptions) => {
     },
   }
 
-  return MUICreateTheme(_.merge(baseTheme, options))
+  const darkPalette = {
+    palette: {
+      background: {
+        default: '#111827',
+        paper: '#1F2937',
+      },
+      text: {
+        primary: '#f9fafb',
+        secondary: '#fff',
+      },
+    },
+  }
+
+  let theme = baseTheme
+
+  if (options?.palette?.mode === 'dark') {
+    theme = _.merge(baseTheme, darkPalette)
+  }
+
+  return MUICreateTheme(_.merge(theme, options))
 }
 
 export default createTheme

@@ -12,14 +12,19 @@ const Button = styled(MUIButton)<CommonStyledProps & ButtonProps>((props) => {
   const bgColor = props.sx?.backgroundColor
     ? props.sx?.backgroundColor
     : props.theme.palette[color].main
+  const shadowColor =
+    props.theme.palette.mode && props.theme.palette.mode === 'dark'
+      ? '255, 255, 255'
+      : '0, 0, 0'
+  const isDark = props.theme.palette.mode && props.theme.palette.mode === 'dark'
 
   const baseStyle = {
     boxShadow: 'none',
     '&:hover': {
-      backgroundColor: 'rgba(0,0,0, 0.04)',
+      backgroundColor: `rgba(${shadowColor}, 0.04)`,
     },
     '&:active': {
-      backgroundColor: 'rgba(0,0,0, 0.08)',
+      backgroundColor: `rgba(${shadowColor}, 0.08)`,
     },
     '&:focus': {},
   }
@@ -31,10 +36,10 @@ const Button = styled(MUIButton)<CommonStyledProps & ButtonProps>((props) => {
       }
     }
     baseStyle['&:hover'] = {
-      backgroundColor: shadeColor(bgColor, -10),
+      backgroundColor: shadeColor(bgColor, isDark ? 10 : -10),
     }
     baseStyle['&:active'] = {
-      backgroundColor: shadeColor(bgColor, -20),
+      backgroundColor: shadeColor(bgColor, isDark ? 20 : -20),
     }
   }
 

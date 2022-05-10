@@ -50,6 +50,13 @@ const theme = createTheme({
       main: '#4F46E5',
       dark: '#4338CA',
     },
+    background: {
+      default: '#f9fafb',
+      paper: '#fff',
+    },
+    text: {
+      primary: '#111827',
+    },
   },
   typography: {
     fontFamily: [
