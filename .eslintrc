@@ -8,5 +8,8 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "react/prop-types": "off"
+  }
 }
