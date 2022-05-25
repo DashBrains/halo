@@ -10,7 +10,9 @@ export default {
 const Template: Story = (props) => <Checkbox {...props} />
 
 export const Basic = Template.bind({})
-Basic.args = {}
+Basic.args = {
+  color: 'primary',
+}
 
 export const Secondary = Template.bind({})
 Secondary.args = {
