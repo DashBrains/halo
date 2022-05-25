@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Story } from '@storybook/react/types-6-0'
 import AppBar from './AppBar'
-import { Box, IconButton, Toolbar, Typography } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
+import { Box, Toolbar, Typography } from '@mui/material'
 import Button from '../Button'
+import IconButton from '../IconButton/IconButton'
+import Icon from '../Icon/Icon'
 
 export default {
   title: 'App Bar',
@@ -28,7 +29,7 @@ Primary.args = {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
+          <Icon icon={'Menu'} />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           News
@@ -52,7 +53,7 @@ Secondary.args = {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
+          <Icon icon={'Menu'} />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           News
@@ -76,7 +77,7 @@ Default.args = {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
+          <Icon icon={'Menu'} />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           News

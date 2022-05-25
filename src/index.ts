@@ -8,6 +8,9 @@ import Link from './components/Link'
 import createTheme from './utils/createTheme'
 import Alert from './components/Alert'
 import IconButton from './components/IconButton'
+import Select from './components/Select'
+import MenuItem from './components/MenuItem'
+import Checkbox from './components/Checkbox'
 
 export {
   Button,
@@ -20,4 +23,7 @@ export {
   Link,
   Alert,
   IconButton,
+  Select,
+  MenuItem,
+  Checkbox,
 }

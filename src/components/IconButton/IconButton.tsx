@@ -23,6 +23,7 @@ const IconButton = styled(MUIIconButton)<CommonStyledProps>((props) => {
     '&:active': {
       backgroundColor: `rgba(${shadowColor}, 0.08)`,
     },
+    borderRadius: props.theme.shape.borderRadius,
   }
 
   if (props.color !== 'inherit' && props.color !== 'default') {

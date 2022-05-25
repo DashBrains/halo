@@ -13,8 +13,8 @@ const Tab = styled(MUITab)((props) => {
     '&:active': {
       backgroundColor: `rgba(${shadowColor}, 0.08)`,
     },
-    borderTopLeftRadius: props.theme.shape.borderRadius,
-    borderTopRightRadius: props.theme.shape.borderRadius,
+    borderRadius: props.theme.shape.borderRadius,
+    marginBottom: '0.5rem',
   }
 })
 

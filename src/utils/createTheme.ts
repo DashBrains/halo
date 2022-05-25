@@ -72,6 +72,17 @@ const createTheme = (options?: ThemeOptions) => {
           disableRipple: true,
         },
       },
+      MuiList: {
+        styleOverrides: {
+          root: {
+            paddingTop: '0.25rem',
+            paddingBottom: '0.25rem',
+            paddingLeft: '0.5rem',
+            paddingRight: '0.5rem',
+            overflow: 'hidden',
+          },
+        },
+      },
     },
   }
 

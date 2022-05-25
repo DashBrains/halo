@@ -28,7 +28,6 @@ const AlertBase = React.forwardRef<HTMLDivElement, AlertProps>(
     )
   }
 )
-AlertBase.displayName = 'AlertBase'
 
 const AlertStyled = styled(AlertBase)((props) => {
   const shadowColor =
@@ -45,6 +44,5 @@ const AlertStyled = styled(AlertBase)((props) => {
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>((props, ref) => (
   <AlertStyled {...props} ref={ref} />
 ))
-Alert.displayName = 'Alert'
 
 export default Alert
