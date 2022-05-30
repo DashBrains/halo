@@ -8,7 +8,7 @@ const Select = ({ MenuProps, ...props }: SelectProps) => {
         MenuProps
           ? MenuProps
           : {
-              sx: { maxHeight: '20.5rem' },
+              sx: { maxHeight: '19.25rem' },
             }
       }
       {...props}

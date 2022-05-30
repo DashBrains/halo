@@ -27,5 +27,6 @@ Basic.args = {
     <MenuItem value={40}>Forty</MenuItem>,
     <MenuItem value={50}>Fifty</MenuItem>,
     <MenuItem value={60}>Sixty</MenuItem>,
+    <MenuItem value={70}>Seventy</MenuItem>,
   ],
 }

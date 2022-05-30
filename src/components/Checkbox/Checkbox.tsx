@@ -8,49 +8,45 @@ import {
 import { CommonStyledProps } from '../../utils/common'
 import shadeColor from '../../utils/shadeColor'
 
-const BpIcon = styled('span')<CommonStyledProps & CheckboxProps>(
-  ({ theme }) =>
-    (props) => {
-      const color =
-        props.color && props.color !== 'default' ? props.color : 'primary'
-      const bgColor = props.sx?.backgroundColor
-        ? props.sx?.backgroundColor
-        : props.theme.palette[color].main
+const BpIcon = styled('span')<CommonStyledProps & CheckboxProps>((props) => {
+  const color =
+    props.color && props.color !== 'default' ? props.color : 'primary'
+  const bgColor = props.sx?.backgroundColor
+    ? props.sx?.backgroundColor
+    : props.theme.palette[color].main
 
-      const isDark =
-        props.theme.palette.mode && props.theme.palette.mode === 'dark'
+  const isDark = props.theme.palette.mode && props.theme.palette.mode === 'dark'
 
-      const size = props.size && props.size === 'small' ? 16 : 20
+  const size = props.size && props.size === 'small' ? 16 : 20
 
-      return {
-        borderRadius: theme.shape.borderRadius,
-        width: size,
-        height: size,
-        boxShadow:
-          theme.palette.mode === 'dark'
-            ? '0 0 0 1px rgb(16 22 26 / 40%)'
-            : 'inset 0 0 0 1px rgba(0,0,0,.2), inset 0 -1px 0 rgba(0,0,0,.1)',
-        backgroundColor: theme.palette.background.paper,
-        '.Mui-focusVisible &': {
-          outline: '2px auto rgba(19,124,189,.6)',
-          outlineOffset: 2,
-        },
-        'input:hover ~ &': {
-          backgroundColor: alpha(shadeColor(bgColor, isDark ? 10 : -10), 0.04),
-        },
-        'input:focus ~ &': {
-          boxShadow: `${props.theme.palette.background.default} 0px 0px 0px 2px, ${bgColor} 0px 0px 0px 4px`,
-        },
-        'input:disabled ~ &': {
-          boxShadow: 'none',
-          background:
-            theme.palette.mode === 'dark'
-              ? 'rgba(57,75,89,.5)'
-              : 'rgba(206,217,224,.5)',
-        },
-      }
-    }
-)
+  return {
+    borderRadius: props.theme.shape.borderRadius,
+    width: size,
+    height: size,
+    boxShadow:
+      props.theme.palette.mode === 'dark'
+        ? '0 0 0 1px rgb(16 22 26 / 40%)'
+        : 'inset 0 0 0 1px rgba(0,0,0,.2), inset 0 -1px 0 rgba(0,0,0,.1)',
+    backgroundColor: props.theme.palette.background.paper,
+    '.Mui-focusVisible &': {
+      outline: '2px auto rgba(19,124,189,.6)',
+      outlineOffset: 2,
+    },
+    'input:hover ~ &&': {
+      backgroundColor: alpha(shadeColor(bgColor, isDark ? 10 : -10), 0.04),
+    },
+    'input:focus ~ &&': {
+      boxShadow: `${props.theme.palette.background.default} 0px 0px 0px 2px, ${bgColor} 0px 0px 0px 4px`,
+    },
+    'input:disabled ~ &&': {
+      boxShadow: 'none',
+      background:
+        props.theme.palette.mode === 'dark'
+          ? 'rgba(57,75,89,.5)'
+          : 'rgba(206,217,224,.5)',
+    },
+  }
+})
 
 const BpCheckedIcon = styled(BpIcon)<CommonStyledProps & CheckboxProps>(
   (props) => {
@@ -77,7 +73,7 @@ const BpCheckedIcon = styled(BpIcon)<CommonStyledProps & CheckboxProps>(
           "1.003 0 00-1.42 1.42l3 3c.18.18.43.29.71.29s.53-.11.71-.29l5-5A1.003 1.003 0 0012 5z' fill='%23fff'/%3E%3C/svg%3E\")",
         content: '""',
       },
-      'input:hover ~ &': {
+      'input:hover ~ &&': {
         backgroundColor: shadeColor(bgColor, isDark ? 10 : -10),
       },
     }

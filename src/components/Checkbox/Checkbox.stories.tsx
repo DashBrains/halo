@@ -20,6 +20,11 @@ Secondary.args = {
   size: 'small',
 }
 
+export const Error = Template.bind({})
+Error.args = {
+  color: 'error',
+}
+
 export const Checked = Template.bind({})
 Checked.args = {
   defaultChecked: true,
