@@ -16,17 +16,19 @@ const Template: Story = (props) => (
   </FormControl>
 )
 
-export const Basic = Template.bind({})
-Basic.args = {
-  label: 'Age',
-  value: 10,
-  children: [
-    <MenuItem value={10}>Ten</MenuItem>,
-    <MenuItem value={20}>Twenty</MenuItem>,
-    <MenuItem value={30}>Thirty</MenuItem>,
-    <MenuItem value={40}>Forty</MenuItem>,
-    <MenuItem value={50}>Fifty</MenuItem>,
-    <MenuItem value={60}>Sixty</MenuItem>,
-    <MenuItem value={70}>Seventy</MenuItem>,
-  ],
-}
+export const Basic = Template.bind(
+  {},
+  {
+    label: 'Age',
+    value: 10,
+    children: [
+      <MenuItem value={10}>Ten</MenuItem>,
+      <MenuItem value={20}>Twenty</MenuItem>,
+      <MenuItem value={30}>Thirty</MenuItem>,
+      <MenuItem value={40}>Forty</MenuItem>,
+      <MenuItem value={50}>Fifty</MenuItem>,
+      <MenuItem value={60}>Sixty</MenuItem>,
+      <MenuItem value={70}>Seventy</MenuItem>,
+    ],
+  }
+)

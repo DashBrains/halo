@@ -9,14 +9,18 @@ export default {
 
 const Template: Story = (props) => <Icon icon={'AlarmClock'} {...props} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  icon: 'Lock',
-  color: 'primary',
-}
+export const Primary = Template.bind(
+  {},
+  {
+    icon: 'Lock',
+    color: 'primary',
+  }
+)
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  icon: 'AlarmClock',
-  color: 'secondary',
-}
+export const Secondary = Template.bind(
+  {},
+  {
+    icon: 'AlarmClock',
+    color: 'secondary',
+  }
+)

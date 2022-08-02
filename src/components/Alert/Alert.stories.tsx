@@ -10,29 +10,37 @@ export default {
 
 const Template: Story = (props) => <Alert {...props} />
 
-export const Success = Template.bind({})
-Success.args = {
-  children: 'This is a success alert',
-  onClose: () => {
-    console.log('called')
-  },
-}
+export const Success = Template.bind(
+  {},
+  {
+    children: 'This is a success alert',
+    onClose: () => {
+      console.log('called')
+    },
+  }
+)
 
-export const Error = Template.bind({})
-Error.args = {
-  severity: 'error',
-  children: 'This is a error alert',
-  action: <Button color={'inherit'}>Close</Button>,
-}
+export const Error = Template.bind(
+  {},
+  {
+    severity: 'error',
+    children: 'This is a error alert',
+    action: <Button color={'inherit'}>Close</Button>,
+  }
+)
 
-export const Warning = Template.bind({})
-Warning.args = {
-  severity: 'warning',
-  children: 'This is a warning alert',
-}
+export const Warning = Template.bind(
+  {},
+  {
+    severity: 'warning',
+    children: 'This is a warning alert',
+  }
+)
 
-export const Info = Template.bind({})
-Info.args = {
-  severity: 'info',
-  children: 'This is a info alert',
-}
+export const Info = Template.bind(
+  {},
+  {
+    severity: 'info',
+    children: 'This is a info alert',
+  }
+)

@@ -10,32 +10,42 @@ export default {
 
 const Template: Story = (props) => <IconButton {...props} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  color: 'primary',
-  children: <Icon icon={'Trash'} />,
-}
+export const Primary = Template.bind(
+  {},
+  {
+    color: 'primary',
+    children: <Icon icon={'Trash'} />,
+  }
+)
 
-export const Success = Template.bind({})
-Success.args = {
-  color: 'success',
-  children: <Icon icon={'Trash'} />,
-}
+export const Success = Template.bind(
+  {},
+  {
+    color: 'success',
+    children: <Icon icon={'Trash'} />,
+  }
+)
 
-export const Error = Template.bind({})
-Error.args = {
-  color: 'error',
-  children: <Icon icon={'Trash'} />,
-}
+export const Error = Template.bind(
+  {},
+  {
+    color: 'error',
+    children: <Icon icon={'Trash'} />,
+  }
+)
 
-export const Warning = Template.bind({})
-Warning.args = {
-  color: 'warning',
-  children: <Icon icon={'Trash'} />,
-}
+export const Warning = Template.bind(
+  {},
+  {
+    color: 'warning',
+    children: <Icon icon={'Trash'} />,
+  }
+)
 
-export const Info = Template.bind({})
-Info.args = {
-  color: 'info',
-  children: <Icon icon={'Trash'} />,
-}
+export const Info = Template.bind(
+  {},
+  {
+    color: 'info',
+    children: <Icon icon={'Trash'} />,
+  }
+)

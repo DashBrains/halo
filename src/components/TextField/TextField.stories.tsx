@@ -9,19 +9,25 @@ export default {
 
 const Template: Story = (props) => <TextField {...props} />
 
-export const Default = Template.bind({})
-Default.args = {
-  label: 'Default',
-}
+export const Default = Template.bind(
+  {},
+  {
+    label: 'Default',
+  }
+)
 
-export const Filled = Template.bind({})
-Filled.args = {
-  variant: 'filled',
-  label: 'Filled',
-}
+export const Filled = Template.bind(
+  {},
+  {
+    variant: 'filled',
+    label: 'Filled',
+  }
+)
 
-export const Error = Template.bind({})
-Error.args = {
-  label: 'Error',
-  error: true,
-}
+export const Error = Template.bind(
+  {},
+  {
+    label: 'Error',
+    error: true,
+  }
+)

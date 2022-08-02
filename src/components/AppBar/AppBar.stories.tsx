@@ -17,75 +17,81 @@ const Template: Story = (props) => (
   </Box>
 )
 
-export const Primary = Template.bind({})
-Primary.args = {
-  children: (
-    <>
-      <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <Icon icon={'Menu'} />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
-        </Typography>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
-    </>
-  ),
-}
+export const Primary = Template.bind(
+  {},
+  {
+    children: (
+      <>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <Icon icon={'Menu'} />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </>
+    ),
+  }
+)
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  color: 'secondary',
-  children: (
-    <>
-      <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <Icon icon={'Menu'} />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
-        </Typography>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
-    </>
-  ),
-}
+export const Secondary = Template.bind(
+  {},
+  {
+    color: 'secondary',
+    children: (
+      <>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <Icon icon={'Menu'} />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </>
+    ),
+  }
+)
 
-export const Default = Template.bind({})
-Default.args = {
-  color: 'inherit',
-  children: (
-    <>
-      <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <Icon icon={'Menu'} />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
-        </Typography>
-        <Button color="primary" variant="contained" disableRing>
-          Login
-        </Button>
-      </Toolbar>
-    </>
-  ),
-}
+export const Default = Template.bind(
+  {},
+  {
+    color: 'inherit',
+    children: (
+      <>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <Icon icon={'Menu'} />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="primary" variant="contained" disableRing>
+            Login
+          </Button>
+        </Toolbar>
+      </>
+    ),
+  }
+)

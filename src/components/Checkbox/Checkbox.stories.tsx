@@ -9,34 +9,43 @@ export default {
 
 const Template: Story = (props) => <Checkbox {...props} />
 
-export const Basic = Template.bind({})
-Basic.args = {
-  color: 'primary',
-}
+export const Basic = Template.bind(
+  {},
+  {
+    color: 'primary',
+  }
+)
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  color: 'secondary',
-  size: 'small',
-}
+export const Secondary = Template.bind(
+  {},
+  {
+    color: 'secondary',
+    size: 'small',
+  }
+)
 
-export const Error = Template.bind({})
-Error.args = {
-  color: 'error',
-}
+export const Error = Template.bind(
+  {},
+  {
+    color: 'error',
+  }
+)
 
 export const Checked = Template.bind({})
 Checked.args = {
   defaultChecked: true,
 }
 
-export const Disabled = Template.bind({})
-Disabled.args = {
-  disabled: true,
-}
-
-export const DisabledChecked = Template.bind({})
-DisabledChecked.args = {
-  disabled: true,
-  checked: true,
-}
+export const Disabled = Template.bind(
+  {},
+  {
+    disabled: true,
+  }
+)
+export const DisabledChecked = Template.bind(
+  {},
+  {
+    disabled: true,
+    checked: true,
+  }
+)

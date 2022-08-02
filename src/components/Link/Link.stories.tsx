@@ -9,9 +9,11 @@ export default {
 
 const Template: Story = (props) => <Link {...props} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  href: '#',
-  children: 'Click me',
-  color: 'secondary',
-}
+export const Primary = Template.bind(
+  {},
+  {
+    href: '#',
+    children: 'Click me',
+    color: 'secondary',
+  }
+)

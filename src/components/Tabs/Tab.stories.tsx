@@ -22,15 +22,18 @@ const Template: Story = (props) => (
 )
 
 export const Basic = Template.bind({})
-Basic.args = {}
 
-export const Colored = Template.bind({})
-Colored.args = {
-  textColor: 'secondary',
-  indicatorColor: 'secondary',
-}
+export const Colored = Template.bind(
+  {},
+  {
+    textColor: 'secondary',
+    indicatorColor: 'secondary',
+  }
+)
 
-export const Centered = Template.bind({})
-Centered.args = {
-  centered: true,
-}
+export const Centered = Template.bind(
+  {},
+  {
+    centered: true,
+  }
+)
