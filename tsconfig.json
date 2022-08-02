@@ -7,11 +7,9 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es6"
     ],
-    "paths": {
-      "@mui/system": ["node_modules/@mui/system"]
-    },
     "declaration": true,
     "declarationDir": "dist",
     "allowJs": true,
@@ -25,9 +23,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true
   },
   "include": [
-    "src",
+    "src"
   ],
   "exclude": [
     "node_modules",
