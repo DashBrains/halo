@@ -13,6 +13,7 @@ import MenuItem from './components/MenuItem'
 import Checkbox from './components/Checkbox'
 import LoadingButton from './components/LoadingButton'
 import { DialogContent, DialogActions, DialogTitle } from './components/Dialog'
+import { ListItem, ListItemButton } from './components/List'
 
 export {
   Button,
@@ -34,4 +35,6 @@ export {
   DialogContent,
   DialogActions,
   DialogTitle,
+  ListItem,
+  ListItemButton,
 }
