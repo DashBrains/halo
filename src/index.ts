@@ -1,6 +1,6 @@
 import Button from './components/Button'
 import TextField from './components/TextField'
-import Card from './components/Card'
+import { Card, CardActions, CardContent } from './components/Card'
 import Tab from './components/Tabs'
 import AppBar from './components/AppBar'
 import Icon from './components/Icon'
@@ -18,6 +18,8 @@ export {
   Button,
   TextField,
   Card,
+  CardActions,
+  CardContent,
   Tab,
   AppBar,
   createTheme,

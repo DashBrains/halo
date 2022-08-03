@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Story } from '@storybook/react/types-6-0'
-import Card from './Card'
-import { CardActions, CardContent, Typography } from '@mui/material'
+import { CardActions, Card, CardContent } from './Card'
+import { Typography } from '@mui/material'
 import Button from '../Button'
 
 export default {
@@ -17,7 +17,7 @@ export const Basic = Template.bind(
     sx: { minWidth: 275 },
     children: (
       <>
-        <CardContent>
+        <CardContent sx={{ padding: '1rem' }}>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             Word of the Day
           </Typography>
@@ -33,7 +33,7 @@ export const Basic = Template.bind(
             {'"a benevolent smile"'}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{ padding: '1rem' }}>
           <Button size="small">Learn More</Button>
         </CardActions>
       </>

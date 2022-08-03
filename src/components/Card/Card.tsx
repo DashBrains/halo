@@ -1,4 +1,9 @@
-import { styled, Card as MUICard } from '@mui/material'
+import {
+  styled,
+  Card as MUICard,
+  CardActions as MUICardAction,
+  CardContent as MUICardContent,
+} from '@mui/material'
 
 const Card = styled(MUICard)((props) => {
   const shadowColor =
@@ -13,4 +18,10 @@ const Card = styled(MUICard)((props) => {
   }
 })
 
-export default Card
+const CardContent = styled(MUICardContent)({ padding: '1rem' })
+
+const CardActions = styled(MUICardAction)({
+  padding: '1rem',
+})
+
+export { CardActions, Card, CardContent }
