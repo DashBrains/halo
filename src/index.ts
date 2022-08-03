@@ -11,6 +11,7 @@ import IconButton from './components/IconButton'
 import Select from './components/Select'
 import MenuItem from './components/MenuItem'
 import Checkbox from './components/Checkbox'
+import LoadingButton from './components/LoadingButton'
 
 export {
   Button,
@@ -26,4 +27,5 @@ export {
   Select,
   MenuItem,
   Checkbox,
+  LoadingButton,
 }

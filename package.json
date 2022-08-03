@@ -30,6 +30,7 @@
     "@emotion/styled": "^11.10.0",
     "@fontsource/nunito": "^4.5.9",
     "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.93",
     "@mui/material": "^5.9.3",
     "@mui/system": "^5.9.3",
     "@storybook/addon-actions": "^6.5.9",
@@ -71,6 +72,7 @@
   "peerDependencies": {
     "@fontsource/nunito": "*",
     "@mui/material": "^5.*",
+    "@mui/label": "^5.*",
     "lucide": "*",
     "react": "^18.*",
     "react-dom": "^18.*"
