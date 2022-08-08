@@ -5,3 +5,9 @@ rollup.config.js
 postcss.config.js
 pnpm-lock.yaml
 *.tgz
+.idea
+.babelrc
+.prettierrc
+tsup.config.ts
+vite.config.ts
+.eslintrc
