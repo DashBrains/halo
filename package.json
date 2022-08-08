@@ -1,6 +1,6 @@
 {
   "name": "project-halo",
-  "version": "0.0.0-internal7",
+  "version": "0.0.0-internal8",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
