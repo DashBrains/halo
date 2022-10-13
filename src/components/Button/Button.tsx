@@ -1,43 +1,8 @@
-import * as React from 'react'
-import {
-  StyledButton,
-  StyledButtonContent,
-  StyledButtonIcon,
-  StyledButtonIconContainer,
-} from './Button.styles'
-import { ButtonProps } from './Button.types'
+import { styled, Button as MUIButton } from '@mui/material'
+import { CommonStyledProps, ButtonBase, ButtonProps } from '../../utils/common'
 
-const Button: React.FC<ButtonProps> = ({
-  color = 'primary',
-  children,
-  leftIcon,
-  rightIcon,
-  variant = 'normal',
-  ...rest
-}) => {
-  return (
-    <StyledButton color={color} variant={variant} {...rest}>
-      {leftIcon && (
-        <StyledButtonIconContainer
-          right={false}
-          disablePadding={variant === 'icon'}
-        >
-          <StyledButtonIcon component={leftIcon} />
-        </StyledButtonIconContainer>
-      )}
-      {variant !== 'icon' && (
-        <StyledButtonContent>{children}</StyledButtonContent>
-      )}
-      {rightIcon && (
-        <StyledButtonIconContainer
-          right={true}
-          disablePadding={variant === 'icon'}
-        >
-          <StyledButtonIcon component={rightIcon} />
-        </StyledButtonIconContainer>
-      )}
-    </StyledButton>
-  )
-}
+const Button = styled(MUIButton)<CommonStyledProps & ButtonProps>((props) =>
+  ButtonBase(props)
+)
 
 export default Button

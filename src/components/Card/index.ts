@@ -1,6 +1,3 @@
-import Card from './Card'
-import CardContent from './CardContent'
-import CardFooter from './CardFooter'
-import CardHeader from './CardHeader'
+import { Card, CardContent, CardActions } from './Card'
 
-export { Card, CardContent, CardHeader, CardFooter }
+export { Card, CardActions, CardContent }
