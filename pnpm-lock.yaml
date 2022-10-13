@@ -38,7 +38,7 @@ specifiers:
   eslint-plugin-react-hooks: ^4.6.0
   husky: ^8.0.1
   lodash: ^4.17.21
-  lucide: ^0.84.0
+  lucide: ^0.91.0
   postcss: ^8.4.14
   postcss-loader: ^6.2.1
   prettier: ^2.7.1
@@ -88,7 +88,7 @@ devDependencies:
   eslint-plugin-react: 7.31.10_eslint@8.25.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.25.0
   husky: 8.0.1
-  lucide: 0.84.0
+  lucide: 0.91.0
   postcss: 8.4.18
   postcss-loader: 6.2.1_postcss@8.4.18
   prettier: 2.7.1
@@ -9124,8 +9124,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide/0.84.0:
-    resolution: {integrity: sha512-rYxYcdE79rkod5qqmESOx+QoJdeusNTXiKUNbx/v9cFrqtz2X6MwckrcrdBwBGQXRQkoeyE3Fp5+pPy39i0nYw==}
+  /lucide/0.91.0:
+    resolution: {integrity: sha512-Ynd2KJjNIP/H/YJnKusvLazgR5RYpCqBJ3Fe0E1D7Ml+MudIxCfPG2l2Bm/HCxPxnXarWypdowbuy6dkeH8d/w==}
     dev: true
 
   /lz-string/1.4.4:
