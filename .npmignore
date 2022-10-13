@@ -11,3 +11,7 @@ pnpm-lock.yaml
 tsup.config.ts
 vite.config.ts
 .eslintrc
+.github/
+.husky/
+.git/
+.commitlintrc.json
