@@ -1,6 +1,6 @@
 {
   "name": "@dashbrains/halo",
-  "version": "0.0.0-internal8",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
