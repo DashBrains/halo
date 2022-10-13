@@ -8,6 +8,7 @@ jobs:
     uses: dashbrains/halo/.github/workflows/format_lint.yml@main
   publish:
     runs-on: ubuntu-latest
+    depends: [ check ]
     steps:
       - uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
