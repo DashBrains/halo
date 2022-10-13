@@ -3,7 +3,10 @@ on:
   release:
     types: [created]
 jobs:
-  build:
+  check:
+    name: Run format & lint & build check
+    uses: dashbrains/halo/.github/workflows/format_lint.yml@main
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,8 +16,13 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@dashbrains'
-      - run: npm install -g pnpm
-      - run: pnpm --frozen-lockfile
-      - run: pnpm publish
+      - name: Install Pnpm
+        run: npm install -g pnpm
+      - name: Installing Node.js dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build package
+        run: pnpm build
+      - name: Publish package
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
