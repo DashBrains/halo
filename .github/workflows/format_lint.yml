@@ -1,0 +1,47 @@
+name: Format & Lint & Build
+on:
+  pull_request:
+    branches:
+      - "**"
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install Node.js dependencies
+        run: pnpm install
+      - name: Run prettier
+        run: pnpm run format
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install Node.js dependencies
+        run: pnpm install
+      - name: Run eslint
+        run: pnpm run lint
+
+  tsc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install Node.js dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm run build-tsc
