@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Meerkt/halo.git"
+    "url": "git+https://github.com/DashBrains/halo.git"
   },
   "keywords": [],
   "author": "DashBrains <dev@dashbrains.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Meerkt/halo/issues"
+    "url": "https://github.com/DashBrains/halo/issues"
   },
-  "homepage": "https://github.com/Meerkt/halo#readme",
+  "homepage": "https://github.com/DashBrains/halo#readme",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@commitlint/cli": "^17.1.2",
