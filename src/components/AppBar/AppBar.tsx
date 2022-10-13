@@ -1,14 +1,14 @@
 import { styled, AppBar as MUIAppBar, alpha, CSSObject } from '@mui/material'
-import { CommonStyledProps } from '../../utils/common'
+import { CommonStyledProps, RaisedProps } from '../../utils/common'
 
 interface baseStyleProps extends CSSObject {
   backdropFilter: string
-  boxShadow: string
+  boxShadow?: string
   top?: number
   zIndex?: number
 }
 
-const AppBar = styled(MUIAppBar)<CommonStyledProps>((props) => {
+const AppBar = styled(MUIAppBar)<CommonStyledProps & RaisedProps>((props) => {
   const shadowColor =
     props.theme.palette.mode && props.theme.palette.mode === 'dark'
       ? '255, 255, 255'
@@ -16,7 +16,13 @@ const AppBar = styled(MUIAppBar)<CommonStyledProps>((props) => {
 
   const baseStyle: baseStyleProps = {
     backdropFilter: 'saturate(180%) blur(20px)',
-    boxShadow: `0 4px 6px 1px rgba(${shadowColor}, 0.1), 0 2px 4px 1px rgba(${shadowColor}, 0.06)`,
+    boxShadow: 'none',
+  }
+
+  if (props.raised) {
+    baseStyle.boxShadow = `0 4px 6px 1px rgba(${shadowColor}, 0.1), 0 2px 4px 1px rgba(${shadowColor}, 0.06)`
+  } else {
+    baseStyle.borderBottom = `1px solid rgba(${shadowColor}, 0.12)`
   }
 
   if (props.position === 'fixed') {

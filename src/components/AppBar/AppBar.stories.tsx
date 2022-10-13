@@ -20,6 +20,7 @@ const Template: Story = (props) => (
 export const Primary = Template.bind(
   {},
   {
+    raised: true,
     children: (
       <>
         <Toolbar>
@@ -46,6 +47,7 @@ export const Secondary = Template.bind(
   {},
   {
     color: 'secondary',
+    raised: true,
     children: (
       <>
         <Toolbar>
@@ -72,6 +74,7 @@ export const Default = Template.bind(
   {},
   {
     color: 'inherit',
+    raised: false,
     children: (
       <>
         <Toolbar>

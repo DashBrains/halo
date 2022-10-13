@@ -13,6 +13,10 @@ export interface ButtonProps {
   disableRing?: boolean
 }
 
+export interface RaisedProps {
+  raised?: boolean
+}
+
 export const ButtonBase = (
   props: { theme: Theme } & MUIStyledCommonProps<Theme> &
     CommonStyledProps &

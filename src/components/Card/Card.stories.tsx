@@ -41,11 +41,11 @@ export const Basic = Template.bind(
   }
 )
 
-export const Outlined = Template.bind(
+export const Raised = Template.bind(
   {},
   {
     sx: { minWidth: 275 },
-    variant: 'outlined',
+    raised: true,
     children: (
       <>
         <CardContent>
