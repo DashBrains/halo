@@ -58,7 +58,7 @@ const createTheme = (options?: ThemeOptions) => {
       ].join(','),
     },
     shape: {
-      borderRadius: '0.375rem',
+      borderRadius: 3,
     },
     components: {
       MuiButtonBase: {
