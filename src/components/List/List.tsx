@@ -18,7 +18,7 @@ const ListItemButton = styled(MUIListItemButton)((props) => {
       : '0, 0, 0'
 
   return {
-    borderRadius: '0.45em',
+    borderRadius: props.theme.shape.borderRadius,
     margin: '0.5rem',
     marginTop: 0,
     marginBottom: 0,

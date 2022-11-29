@@ -1,9 +1,9 @@
 import { styled, MenuItem as MUIMenuItem } from '@mui/material'
 
-const MenuItem = styled(MUIMenuItem)(() => {
+const MenuItem = styled(MUIMenuItem)((props) => {
   return {
     margin: '0.5rem',
-    borderRadius: '0.45em',
+    borderRadius: props.theme.shape.borderRadius,
     marginTop: '0.25rem',
     marginBottom: '0.25rem',
     '&:active': {
