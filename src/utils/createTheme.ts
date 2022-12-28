@@ -75,8 +75,8 @@ const createTheme = (options?: ThemeOptions) => {
       MuiList: {
         styleOverrides: {
           root: {
-            paddingTop: '0.25rem',
-            paddingBottom: '0.25rem',
+            paddingTop: '0.125rem',
+            paddingBottom: '0.125rem',
           },
         },
       },

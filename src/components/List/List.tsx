@@ -7,8 +7,8 @@ import {
 const ListItem = styled(MUIListItem)({
   paddingLeft: 0,
   paddingRight: 0,
-  paddingTop: '0.25rem',
-  paddingBottom: '0.25rem',
+  paddingTop: '0.125rem',
+  paddingBottom: '0.125rem',
 })
 
 const ListItemButton = styled(MUIListItemButton)((props) => {
@@ -19,7 +19,7 @@ const ListItemButton = styled(MUIListItemButton)((props) => {
 
   return {
     borderRadius: props.theme.shape.borderRadius,
-    margin: '0.5rem',
+    margin: '0.125rem',
     marginTop: 0,
     marginBottom: 0,
     '&:active': {
