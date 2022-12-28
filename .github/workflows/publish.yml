@@ -11,12 +11,12 @@ jobs:
     needs: [ check ]
     steps:
       - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@dashbrains'
+          cache: 'pnpm'
       - name: Install Pnpm
         run: npm install -g pnpm
       - name: Installing Node.js dependencies

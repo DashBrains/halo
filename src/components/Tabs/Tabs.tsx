@@ -14,7 +14,7 @@ const Tab = styled(MUITab)((props) => {
       backgroundColor: `rgba(${shadowColor}, 0.08)`,
     },
     borderRadius: props.theme.shape.borderRadius,
-    marginBottom: '0.5rem',
+    marginBottom: '0.25rem',
   }
 })
 

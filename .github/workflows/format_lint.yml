@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'pnpm'
       - name: Install Pnpm
         run: npm install -g pnpm
       - name: Install Node.js dependencies
@@ -26,10 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'pnpm'
       - name: Install Pnpm
         run: npm install -g pnpm
       - name: Install Node.js dependencies
@@ -41,10 +43,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'pnpm'
       - name: Install Pnpm
         run: npm install -g pnpm
       - name: Install Node.js dependencies
