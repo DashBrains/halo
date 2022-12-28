@@ -1,7 +1,14 @@
+type SVGProps = Record<string, string | number>
+type IconNodeChild = readonly [tag: string, attrs: SVGProps]
+type IconNode = readonly [
+  tag: string,
+  attrs: SVGProps,
+  children?: IconNodeChild[]
+]
+
 import * as React from 'react'
 import * as icons from 'lucide'
 import { createSvgIcon, styled, SvgIconProps } from '@mui/material'
-import { IconNode } from 'lucide'
 import _ from 'lodash'
 
 type Icons = keyof typeof icons
