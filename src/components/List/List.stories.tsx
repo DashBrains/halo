@@ -51,7 +51,7 @@ export const WithIcon = Template.bind(
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
-              <Icon icon={'MailOpen'} />
+              <Icon icon={'MailOpened'} />
             </ListItemIcon>
             <ListItemText primary="Drafts" />
           </ListItemButton>

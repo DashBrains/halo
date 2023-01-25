@@ -31,7 +31,7 @@ export const Primary = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu'} />
+            <Icon icon={'Menu2'} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
@@ -58,7 +58,7 @@ export const Secondary = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu'} />
+            <Icon icon={'Menu2'} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
@@ -85,7 +85,7 @@ export const Default = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu'} />
+            <Icon icon={'Menu2'} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News

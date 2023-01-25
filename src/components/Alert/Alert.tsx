@@ -6,10 +6,10 @@ import IconButton from '../IconButton/IconButton'
 const AlertBase = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ iconMapping, onClose, action, ...rest }, ref) => {
     const customIconMapping = {
-      success: <Icon icon={'CheckCircle'} fontSize="inherit" />,
+      success: <Icon icon={'CircleCheck'} fontSize="inherit" />,
       error: <Icon icon={'AlertCircle'} fontSize="inherit" />,
       warning: <Icon icon={'AlertTriangle'} fontSize="inherit" />,
-      info: <Icon icon={'Info'} fontSize="inherit" />,
+      info: <Icon icon={'InfoCircle'} fontSize="inherit" />,
     }
 
     const onCloseButton = (

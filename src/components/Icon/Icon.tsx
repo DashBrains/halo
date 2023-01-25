@@ -1,31 +1,27 @@
-type SVGProps = Record<string, string | number>
-type IconNodeChild = readonly [tag: string, attrs: SVGProps]
-type IconNode = readonly [
-  tag: string,
-  attrs: SVGProps,
-  children?: IconNodeChild[]
-]
-
 import * as React from 'react'
-import * as icons from 'lucide'
+import * as tabler from '@tabler/icons-react'
 import { createSvgIcon, styled, SvgIconProps } from '@mui/material'
-import _ from 'lodash'
 
-type Icons = keyof typeof icons
+type TablerIcons = keyof typeof tabler
+type WithoutIconSufix<T> = T extends `Icon${infer P}` ? P : never
 
 export interface IconProps extends SvgIconProps {
-  icon: Exclude<Icons, 'icons' | 'createElement' | 'createIcons'>
+  icon: WithoutIconSufix<TablerIcons>
 }
 
 const Icon: React.FC<IconProps> = (props) => {
-  const createEls = (elements: IconNode) => {
-    return elements[2]?.map((element, index) =>
-      React.createElement(element[0], _.merge(element[1], { key: index }))
-    )
+  const icon = `Icon${props.icon}` as TablerIcons
+  let SelectedIcon
+
+  if (!Object.keys(tabler).includes(icon)) {
+    SelectedIcon = tabler.IconQuestionMark
+  } else {
+    SelectedIcon = tabler[icon]
   }
 
-  const component = createEls(icons[props.icon])
-  const IC = createSvgIcon(component, String(props.icon))
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const IC = createSvgIcon(<SelectedIcon />, String(props.icon))
 
   return (
     <IC

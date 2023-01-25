@@ -44,8 +44,7 @@ const createTheme = (options?: ThemeOptions) => {
     },
     typography: {
       fontFamily: [
-        'Nunito',
-        'Roboto',
+        'Inter',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
