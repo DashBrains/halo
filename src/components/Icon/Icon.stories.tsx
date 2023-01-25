@@ -7,7 +7,7 @@ export default {
   component: Icon,
 }
 
-const Template: Story = (props) => <Icon icon={'AlarmClock'} {...props} />
+const Template: Story = (props) => <Icon icon={'Alarm'} {...props} />
 
 export const Primary = Template.bind(
   {},
@@ -20,7 +20,7 @@ export const Primary = Template.bind(
 export const Secondary = Template.bind(
   {},
   {
-    icon: 'AlarmClock',
+    icon: 'Alarm',
     color: 'secondary',
   }
 )

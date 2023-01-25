@@ -25,7 +25,7 @@ export const Outlined = Template.bind(
     children: 'Outlined',
     loading: true,
     loadingPosition: 'start',
-    startIcon: <Icon icon={'Save'} />,
+    startIcon: <Icon icon={'DeviceFloppy'} />,
     variant: 'outlined',
   }
 )
