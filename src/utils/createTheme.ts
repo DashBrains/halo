@@ -79,6 +79,18 @@ const createTheme = (options?: ThemeOptions) => {
           },
         },
       },
+      MuiTextField: {
+        defaultProps: {
+          InputLabelProps: {
+            shrink: true,
+          },
+        },
+      },
+      MuiInputLabel: {
+        defaultProps: {
+          shrink: true,
+        },
+      },
     },
   }
 
