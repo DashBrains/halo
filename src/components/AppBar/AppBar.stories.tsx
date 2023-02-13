@@ -5,6 +5,7 @@ import { Box, Toolbar, Typography } from '@mui/material'
 import Button from '../Button'
 import IconButton from '../IconButton/IconButton'
 import Icon from '../Icon/Icon'
+import { IconMenu2 } from '@tabler/icons-react'
 
 export default {
   title: 'App Bar',
@@ -31,7 +32,7 @@ export const Primary = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu2'} />
+            <Icon icon={IconMenu2} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
@@ -58,7 +59,7 @@ export const Secondary = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu2'} />
+            <Icon icon={IconMenu2} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
@@ -85,7 +86,7 @@ export const Default = Template.bind(
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Icon icon={'Menu2'} />
+            <Icon icon={IconMenu2} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News

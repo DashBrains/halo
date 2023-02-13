@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Story } from '@storybook/react/types-6-0'
 import LoadingButton from './LoadingButton'
 import Icon from '../Icon/Icon'
+import { IconDeviceFloppy } from '@tabler/icons-react'
 
 export default {
   title: 'Loading Button',
@@ -25,7 +26,7 @@ export const Outlined = Template.bind(
     children: 'Outlined',
     loading: true,
     loadingPosition: 'start',
-    startIcon: <Icon icon={'DeviceFloppy'} />,
+    startIcon: <Icon icon={IconDeviceFloppy} />,
     variant: 'outlined',
   }
 )

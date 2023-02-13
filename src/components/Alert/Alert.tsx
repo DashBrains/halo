@@ -2,19 +2,26 @@ import React from 'react'
 import { Alert as MUIAlert, AlertProps, styled } from '@mui/material'
 import Icon from '../Icon/Icon'
 import IconButton from '../IconButton/IconButton'
+import {
+  IconAlertCircle,
+  IconAlertTriangle,
+  IconCircleCheck,
+  IconInfoCircle,
+  IconX,
+} from '@tabler/icons-react'
 
 const AlertBase = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ iconMapping, onClose, action, ...rest }, ref) => {
     const customIconMapping = {
-      success: <Icon icon={'CircleCheck'} fontSize="inherit" />,
-      error: <Icon icon={'AlertCircle'} fontSize="inherit" />,
-      warning: <Icon icon={'AlertTriangle'} fontSize="inherit" />,
-      info: <Icon icon={'InfoCircle'} fontSize="inherit" />,
+      success: <Icon icon={IconCircleCheck} fontSize="inherit" />,
+      error: <Icon icon={IconAlertCircle} fontSize="inherit" />,
+      warning: <Icon icon={IconAlertTriangle} fontSize="inherit" />,
+      info: <Icon icon={IconInfoCircle} fontSize="inherit" />,
     }
 
     const onCloseButton = (
       <IconButton size={'small'} color={'inherit'} onClick={onClose}>
-        <Icon icon={'X'} fontSize={'inherit'} color={'inherit'} />
+        <Icon icon={IconX} fontSize={'inherit'} color={'inherit'} />
       </IconButton>
     )
 
