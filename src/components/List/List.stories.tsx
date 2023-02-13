@@ -3,6 +3,7 @@ import { Box, List, ListItemIcon, ListItemText } from '@mui/material'
 import { Story } from '@storybook/react/types-6-0'
 import Icon from '../Icon/Icon'
 import { ListItem, ListItemButton } from './List'
+import { IconInbox, IconMailOpened } from '@tabler/icons-react'
 
 export default {
   title: 'List',
@@ -43,7 +44,7 @@ export const WithIcon = Template.bind(
         <ListItem>
           <ListItemButton selected>
             <ListItemIcon>
-              <Icon icon={'Inbox'} />
+              <Icon icon={IconInbox} />
             </ListItemIcon>
             <ListItemText primary="Inbox" />
           </ListItemButton>
@@ -51,7 +52,7 @@ export const WithIcon = Template.bind(
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
-              <Icon icon={'MailOpened'} />
+              <Icon icon={IconMailOpened} />
             </ListItemIcon>
             <ListItemText primary="Drafts" />
           </ListItemButton>

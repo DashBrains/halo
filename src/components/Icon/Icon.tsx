@@ -1,27 +1,13 @@
 import * as React from 'react'
-import * as tabler from '@tabler/icons-react'
 import { createSvgIcon, styled, SvgIconProps } from '@mui/material'
-
-type TablerIcons = keyof typeof tabler
-type WithoutIconSufix<T> = T extends `Icon${infer P}` ? P : never
+import type { TablerIconsProps } from '@tabler/icons-react'
 
 export interface IconProps extends SvgIconProps {
-  icon: WithoutIconSufix<TablerIcons>
+  icon: (props: TablerIconsProps) => JSX.Element
 }
 
 const Icon: React.FC<IconProps> = (props) => {
-  const icon = `Icon${props.icon}` as TablerIcons
-  let SelectedIcon
-
-  if (!Object.keys(tabler).includes(icon)) {
-    SelectedIcon = tabler.IconQuestionMark
-  } else {
-    SelectedIcon = tabler[icon]
-  }
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const IC = createSvgIcon(<SelectedIcon />, String(props.icon))
+  const IC = createSvgIcon(<props.icon />, String(props.icon))
 
   return (
     <IC
