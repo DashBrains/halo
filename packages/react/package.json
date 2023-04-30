@@ -1,0 +1,16 @@
+{
+  "name": "@dashbrains/halo-react",
+  "main": "src/index.tsx",
+  "types": "src/index.tsx",
+  "scripts": {},
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@linaria/core": "^4.2.9",
+    "@linaria/react": "^4.3.7"
+  }
+}
