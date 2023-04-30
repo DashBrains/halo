@@ -4,14 +4,21 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix --no-error-on-unmatched-pattern",
+    "format:fix": "prettier '**/*.{js,jsx,ts,tsx}' --write --no-error-on-unmatched-pattern",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@dashbrains/eslint-config": "^1.0.1",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.0",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "halo"
+  "name": "@dashbrains/halo"
 }
