@@ -34,7 +34,7 @@
     "@emotion/babel-plugin": "^11.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@fontsource/inter": "^4.5.9",
+    "@fontsource/inter": "^5.0.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/lab": "5.0.0-alpha.119",
     "@mui/material": "^5.11.8",
